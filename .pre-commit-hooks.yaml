@@ -1,0 +1,12 @@
+# This file defines the hooks available in this repository
+# It's used by pre-commit to know what hooks are available
+
+- id: check-commit-size
+  name: check-commit-size
+  description: Check commit size limits (additions and deletions)
+  entry: python -m pre_commit_hooks.check_commit_size
+  language: python
+  types: [text]
+  stages: [commit]
+  additional_dependencies: []
+  pass_filenames: false
